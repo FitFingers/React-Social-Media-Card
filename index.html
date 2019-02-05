@@ -1,0 +1,117 @@
+<body>
+
+<style>
+  * {
+    font-family: trebuchet ms, arial;
+  }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.7.0/umd/react.production.min.js" crossorigin></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.7.0/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<script type="text/babel">
+  // STYLES
+const mainContainerStyle = {
+  background: "white",
+  width: 800,
+  overflow: "hidden",
+  border: "1px solid rgba(0,0,0,0.27)",
+  borderRadius: 8,
+};
+
+const descriptionStyle = {
+  padding: "0px 12px",
+};
+
+const mainImageStyle = {
+  position: "relative",
+  width: "100%",
+  maxWidth: 800,
+  height: "auto",
+};
+
+const thumbnailStyle = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  margin: 10,
+  width: "10%",
+  height: "auto",
+  borderRadius: 3,
+};
+
+const logoStyle = {
+  position: "absolute",
+  bottom: 0,
+  right: 0,
+  margin: "14px 10px",
+  width: "22%",
+  height: "auto",
+  borderRadius: 3,
+};
+
+
+
+// COMPONENTS
+const ThumbnailIcon = () => <img style={thumbnailStyle} src="https://i.ibb.co/p4tv7Vb/logo-small-white.png" alt="Company Thumbnail" />;
+
+const LargeLogo = () => <img style={logoStyle} src="https://i.ibb.co/0D6VZ2k/logo-large-white.png" alt="Click this logo for a great time" />;
+
+const MainImage = () => {
+  return (
+    <div style={{position: "relative", width: "max-content"}}>
+
+      <img style={mainImageStyle} src="https://i.ibb.co/G58hn6z/beauty-red-top-desktop-Edited.jpg" alt="Stock bird's-eye-view image of two people planning on a mindmap whilst drinking coffee and using a laptop." />
+      <ThumbnailIcon />
+      <LargeLogo />
+
+    </div>
+  );
+};
+
+const DescriptionContainer = () => {
+  return (
+    <div style={descriptionStyle}>
+      <h1 style={{fontSize: 18}}>Learning to code? It's the little things that count.</h1>
+      <p style={{fontSize: 18}}>Practice building simple components like these and soon you'll be able to string them all together into anything you want.</p>
+      <a href="https://fitfingers.github.io" target="_blank" style={{display: "block", margin: "18px 0px", fontSize: 18, opacity: 0.5, textDecoration: "none"}}>fitfingers.github.io</a>
+    </div>
+  );
+}
+
+
+
+// MAIN COMPONENT -- no idea whether to wrap the entire div in an a or whether host site (ie. Twitter) would do that themselves.
+class MainContainer extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+        <div style={mainContainerStyle}>
+
+          <MainImage />
+          <DescriptionContainer />
+
+        </div>
+    );
+  }
+};
+
+
+
+
+
+ReactDOM.render(<MainContainer />, document.getElementById("app"));
+
+</script> -->
+  
+  
+  
+<!--    -->
+  
+  
+  
+  <div id="app"></div>
+</body>
